@@ -1,3 +1,40 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Contenedor del ícono */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;  /* Reducir el tamaño del círculo */
+    height: 55px; /* Reducir el tamaño del círculo */
+    border-radius: 50%; /* Hace que el contenedor sea circular */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo translúcido para simular un planeta */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    perspective: 1000px; /* Añadir perspectiva para el efecto 3D */
+    animation: rotatePlanet 5s infinite linear; /* Animación de rotación continua */
+}
+
+/* Efecto de rotación en 3D */
+.icon {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg); /* Rotación inicial */
+}
+
+/* Animación de rotación continua (simula el giro de un planeta) */
+@keyframes rotatePlanet {
+    0% {
+        transform: rotateY(0deg); /* Comienza en 0 grados */
+    }
+    100% {
+        transform: rotateY(360deg); /* Gira 360 grados */
+    }
+}
+
+/* Estilos adicionales para el ícono dentro del "planeta" */
+.icon-container:hover .icon {
+    transform: rotateY(360deg) scale(1.2); /* Aumenta el tamaño al hacer hover */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4); /* Sombra más intensa al hacer hover */
+}
