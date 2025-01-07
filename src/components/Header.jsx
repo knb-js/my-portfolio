@@ -2,8 +2,8 @@ import React from 'react'
 
 export const Header = () => {
     return (
-        <header className="bg-gray-800 text-white p-4 flex justify-center">
-            <div className="w-full max-w-7xl flex justify-between items-center mt-6">
+        <header className="bg-gray-700 text-white p-4 flex justify-center">
+            <div className="w-full max-w-7xl flex justify-between items-center">
 
                 <h1 className="text-3xl font-bold text-green-400">Software Engineer</h1>
 
