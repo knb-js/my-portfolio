@@ -76,7 +76,7 @@ export const Projects = () => {
         >
             <h2 className="text-3xl font-bold mb-6">My Projects</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {repos.slice(0, 10).map((repo) => (
+                {repos.slice(0, 9).map((repo) => (
                     <div
                         key={repo.id}
                         className="bg-gray-800 p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
