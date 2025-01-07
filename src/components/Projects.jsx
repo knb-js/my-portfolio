@@ -28,13 +28,8 @@ export const Projects = () => {
 
     useEffect(() => {
         const fetchRepos = async () => {
-            const token = process.env.REACT_APP_GITHUB_TOKEN; // Acceder al token de las variables de entorno
             try {
-                const response = await fetch("https://api.github.com/users/knb-js/repos", {
-                    headers: {
-                        'Authorization': `Bearer ${token}`
-                    }
-                });
+                const response = await fetch("https://api.github.com/users/knb-js/repos");
                 const data = await response.json();
                 const filteredRepos = data.filter((repo) => !repo.fork);
 
